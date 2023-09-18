@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: black;
+
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(66, 91%, 78%);
+}
+
+.container {
+    position: relative;
+}
+
+.clock {
+    background-color: yellow;
+    border: 3px solid rgb(195, 195, 108);
+    box-shadow: 3px 3px #ffe100, -1em 0 .4em olive;
+    ;
+    width: 420px;
+    height: 420px;
+    border-radius: 60%;
+}
+
+.clock span {
+    position: absolute;
+    transform: rotate(calc(30deg* var(--i)));
+    inset: 20px;
+    text-align: center;
+}
