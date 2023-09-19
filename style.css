@@ -27,6 +27,9 @@ body {
     width: 420px;
     height: 420px;
     border-radius: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .clock span {
@@ -34,4 +37,36 @@ body {
     transform: rotate(calc(30deg* var(--i)));
     inset: 20px;
     text-align: center;
+
+}
+
+.clock span h2 {
+    display: inline-block;
+    transform: rotate(calc(-30deg* var(--i)));
+
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    background-color: black;
+    border-radius: 70%;
+    width: 10px;
+    height: 10px;
+    z-index: 10;
+}
+
+.move {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.move h3 {
+    position: absolute;
+    border-radius: 5px;
+    background-color: var(--color);
+    width: 7px;
+    height: var(--height);
 }
